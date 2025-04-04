@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>À quel point je t’aime</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffe6f0, #fffafc);
+      font-family: 'Segoe UI', sans-serif;
+      color: #4b2e2e;
+      overflow-x: hidden;
+    }
+    .container {
+      text-align: center;
+      padding: 80px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+      color: #d6336c;
+    }
+    p {
+      font-size: 1.3em;
+      line-height: 1.8;
+    }
+    .heart {
+      position: fixed;
+      top: -10px;
+      font-size: 20px;
+      animation: float 8s infinite linear;
+      color: #ff5a84;
+      user-select: none;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0); opacity: 1; }
+      100% { transform: translateY(100vh) translateX(50px); opacity: 0; }
+    }
+    audio {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>À quel point je t’aime</h1>
+    <p>
+      Tu veux savoir à quel point je t’aime ?<br><br>
+      C’est comme vouloir mesurer l’infini.<br>
+      C’est dans chaque battement de mon cœur, chaque silence rempli de ton nom.<br><br>
+      T’aimer, ce n’est pas juste un mot…<br>
+      C’est une évidence, un besoin, une douceur qui m’habite.<br>
+      Si je devais résumer ce que je ressens en un seul mot ?
+Toi.
+Tout en toi m’attire, tout en toi me bouleverse.
+Je ne cherche pas à expliquer pourquoi,
+Parce qu’aimer n’a jamais eu besoin d’explication.
+Juste une certitude : c’est toi.
+<br>
+      Même sans te voir, je pense à toi.<br>
+      Même sans te parler, je te sens.<br>
+      Quoi qu’il arrive, où que l’on soit,
+Je veux que tu saches une chose :
+Je serai toujours là.
+Pas juste quand c’est facile, pas juste quand tout va bien.
+Mais aussi dans les silences, dans les doutes, dans les jours moins beaux.
+Parce que ce que je ressens pour toi ne dépend de rien,
+Il est simplement là, toujours.
+<br>
+      Et chaque jour, je me rends compte :<br>
+      T’aimer, c’est ce que je fais de plus vrai.
+    </p>
+    
+  </div>
+
+  <script>
+    // Génère des coeurs flottants
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.textContent = "♥";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 8000);
+    }
+    setInterval(createHeart, 500);
+  </script>
+</body>
+</html>
